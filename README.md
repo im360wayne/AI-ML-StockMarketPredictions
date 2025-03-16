@@ -22,7 +22,7 @@ Being able to predict stock price movement can help inform investment decisions.
 Can stock price movement be predicted using historic stock market data?
 
 ### Data Sources
-Historical stock price data from Yahoo! Finance stocks including historic prices, volume, dividends and other stock metrics such as a volitility index.
+Historical stock price data from Yahoo! Finance stocks including historic prices, volume, dividends and other stock metrics such as a volatility index.
 
 ### Methodology
 The industry standard model of CRISP-DM will be used to guide the analysis. 
@@ -43,18 +43,18 @@ For the training dataset, an "Up" or "Down" result is calculated based on whethe
 Decision Trees, K-Nearest Neighbors (KNN), and Support Vector Machines (SVM) models—with various hyper-parameters tuned using GridSearch—will be used to perform the classification.
 
 ### Results
-Prelimiary analysis shows that a test precision score of up to 68% can be reached indicating that such a model is possible and would beat out purchasing stocks on a random selection of days. 
+Preliminary analysis shows that a test precision score of up to 68% can be reached indicating that such a model is possible and would beat out purchasing stocks on a random selection of days. 
 
 **Additional Observations**
 * Engineered features, such as a horizon ration, and historical time shifted deltas were the most important in predictions. 
-* As part of explatory data analysis (EDA), it was discovered that the maximum corellation values were associated with the ratio of the two-day average price change and the previous day’s price, respectively. This finding suggests some market momentum, where price increases on previous days can help predict continued upward movement.
+* As part of exploratory data analysis (EDA), it was discovered that the maximum correlation values were associated with the ratio of the two-day average price change and the previous day’s price, respectively. This finding suggests some market momentum, where price increases on previous days can help predict continued upward movement.
 * While trading volume follows a roughly normal distribution, it is very skewed towards large trades. This could be due to a high number of institutional investors that react upon certain market changes with big trades.
 * Changes in the daily price (delta) appear to form an approximately bell-shaped curve. This indicates that small corrections in the stock value occur more frequently, whereas large price changes—either positive or negative—are relatively rare. Future research could leverage this distribution to estimate the potential magnitude of price changes offering additional insights for traders.
 
 
 ### Next steps
 * Continue developing and tuning the model.
-* Complete full model development and tunine. 
+* Complete full model development and tuning. 
 * Identify comprehensive next steps.
 
 ### Outline of project
