@@ -1,4 +1,7 @@
 ## An Examination of AI and Machine Learning Techniques for Stock Market Predictions
+<center>
+    <img src = images/stock-banner.jpg width = 100%/>
+</center>
 
 **Aurthor: Wayne H. Lee** <br>
 Email: wayneone@gmail.com
