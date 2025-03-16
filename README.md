@@ -3,7 +3,7 @@
     <img src = images/stock-banner.jpg width = 100%/>
 </center>
 
-**Aurthor: Wayne H. Lee** <br>
+**Author: Wayne H. Lee** <br>
 Email: wayneone@gmail.com
 
 ### Executive summary
