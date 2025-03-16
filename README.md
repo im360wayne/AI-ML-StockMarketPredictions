@@ -56,4 +56,5 @@ Prelimiary analysis shows that a test precision score of up to 68% can be reache
 
 ### Outline of project
 
-- [StockMarketPredictions.ipynb]()
+* <a href="StockMarketPredictions.ipynb">StockMarketPredictions.ipynb</a>
+
