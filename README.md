@@ -217,7 +217,7 @@ After tuning, the KNN model had a F1 score of 0.617, a precision score of 0.574,
 
 * Jupyter Notebook:  <a href="StockMarketPredictions.ipynb">StockMarketPredictions.ipynb</a>
 * Download Data:  <a href="data/data.zip">data.zip</a>
-* Final Report:  <a href="Stock Market Predictions Final Project Report.docx">Stock Market Predictions Final Project Report.doc</a>
+* Final Report:  <a href="Stock Market Predictions Final Report.docx">Stock Market Predictions Final Report.doc</a>
 
 ## Contact and Further Information
 
