@@ -58,11 +58,11 @@ The highest performing model tested was a Support Vector Machine. For the stock 
 While this preliminary investigation provides a useful model, additional enhancements can be made. 
 
 * Continue to tune the SVM and Decision Tree models. For example, exploring different the C value and kernels for SVM.
-* Continued exploration in feature selection using PCA to see if better results can be acheived with fewer features.
+* Continued exploration in feature selection using PCA to see if better results can be achieved with fewer features.
 * Additional performance metric features in the form of derived attributes.
 * Investigate additional models such as neural networks.
 * Attempting to understand the magnitude of price changes by using regression models.
-* Using additional input data such as news sentiment analysis and other market indicies.
+* Using additional input data such as news sentiment analysis and other market indices.
 * Analyze the stocks of other companies other than Apple Computer
 
 ## Rationale
@@ -72,9 +72,9 @@ Being able to predict stock price movement can help inform investment decisions.
 Can stock price movement be predicted using historic stock market data?
 
 ## Data Sources
-Historical Apple Computer (AAPL) stock price data was gathered from Yahoo! Finance. This including historic prices, volume, and dividends. A market indicator, Volitilty Index (VIX) was also retrieved. https://finance.yahoo.com/
+Historical Apple Computer (AAPL) stock price data was gathered from Yahoo! Finance. This including historic prices, volume, and dividends. A market indicator, Volatility Index (VIX) was also retrieved. https://finance.yahoo.com/
 
-A five year time window between March 16, 2020 to March 14, 2025 was selected to get sufficient data necessary for training of approximately 1000 daily records. A total of 1257 records were collected to ensure incomplete historic information at the begining of the time series data could be discarded.
+A five year time window between March 16, 2020 to March 14, 2025 was selected to get sufficient data necessary for training of approximately 1000 daily records. A total of 1257 records were collected to ensure incomplete historic information at the beginning of the time series data could be discarded.
 
 ### Exploratory Data Analysis
 The quality of the data from Yahoo! Finance is excellent. Data was provided for all days the market was open (weekdays excluding trading holidays).
@@ -125,7 +125,7 @@ For this application, an industry standard model called CRISP-DM is used.  This 
 ### Evaluation Metric
 In this scenario where the trader only purchases on days where model predicts UP. The trader would like to maximize the number of True Positives which represent days that the model predicted and in fact the stock went up.  
 
-The following should be minimized: (1) False Positives can be labled as "Costly Mistakes" because those are days where the model indicated a purchase should be made and money was lost as the price went down. (2) Missed Opportunities are represented by False Negatives as those are days that the stock value increased but the model did not indicate a purchase should be made. 
+The following should be minimized: (1) False Positives can be labelled as "Costly Mistakes" because those are days where the model indicated a purchase should be made and money was lost as the price went down. (2) Missed Opportunities are represented by False Negatives as those are days that the stock value increased but the model did not indicate a purchase should be made. 
 
 True Negatives are irrelevant as in this scenario as a purchase would not have been made.  
 
@@ -178,7 +178,7 @@ Four models were considered, tuned and evaluated.
 
 **Decision Tree** Using default values, a DecisionTreeClassifier with the default 'gini' criterion was used and a tree of depth 17 was produced. The default setting produced a training accuracy of 1.0 suggesting some overfitting.  Tuning the hyperparameter 'max_depth' using GridSearchCV identified a flat tree with a max_depth=1 as optimal with the training set. This reduced the training accuracy but increased test accuracy and F1 scores confirming that overfitting was previously happening.
 
-**Random Forest Classifier** To avoid the overfitting issues seen in the decision tree, the RandomForestClassifier was used with n_estimators = 100 and min_samples_split=100 to ensure a reasonable divison of the training set. 
+**Random Forest Classifier** To avoid the overfitting issues seen in the decision tree, the RandomForestClassifier was used with n_estimators = 100 and min_samples_split=100 to ensure a reasonable division of the training set. 
 
 **SVM (Support Vector Machine)** A Support Vector Classifier Model was used in a pipeline inline with a StandardScalar transformer.
 
@@ -202,7 +202,7 @@ With the Ideal Scenario Confusion Matrix above in mind, the confusion matrix for
 </center>
 
 **SVM (Support Vector Machine) Model**
-Of the models evaluated, the SVC model performed the best at predicting price increases. It had the highest F1 score at 0.6685 and a precision score of 0.62. It was also the best model at identifing true positives and minimizing missed opportunities. The ratio of money making predictions (TP: 121) to money losing predictions (FP: 73) was 1.66 to 1.
+Of the models evaluated, the SVC model performed the best at predicting price increases. It had the highest F1 score at 0.6685 and a precision score of 0.62. It was also the best model at identifying true positives and minimizing missed opportunities. The ratio of money making predictions (TP: 121) to money losing predictions (FP: 73) was 1.66 to 1.
 
 **Random Forest Classifier Model**
 The Random Forest Classifier is an ensemble model that uses multiple decision trees to improve predictive performance and reduce overfitting. It had a similar F1 performance at 0.6684 however was just a bit behind SVM in Precision at 0.61. 
@@ -210,7 +210,7 @@ The Random Forest Classifier is an ensemble model that uses multiple decision tr
 **Decision Tree Model**
 The tuned Decision Tree produced the highest Precision score of the models considered at 0.627. The result is the best ratio of money making trades to money losing trades at 1.69 to 1. However, it had only the third highest F1 score at 0.663 meaning that it had a higher rate of "missed opportunities." 
 
-**K Nearest Neighbor Model**
+**K Nearest Neighbors Model**
 After tuning, the KNN model had a F1 score of 0.617, a precision score of 0.574, and test accuracy of 0.544. 
 
 ## Outline of Project
